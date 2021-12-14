@@ -63,6 +63,13 @@ var tekenAlles = function () {
 
   // punten en health
 
+
+   //tekst game 
+   fill(235, 200, 96);
+   textSize(40);
+   textFont('courier');
+   text('MATH DRIFT', 470, 40);
+
 };
 
 /**
@@ -86,8 +93,10 @@ function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
   createCanvas(1280, 720);
 
+  bg = loadImage("images/sunset.png");
+
   // Kleur de achtergrond blauw, zodat je het kunt zien
-  background('blue');
+  
 }
 
 /**
@@ -96,6 +105,9 @@ function setup() {
  * uitgevoerd door de p5 library, nadat de setup functie klaar is
  */
 function draw() {
+
+  background(bg);
+
   if (spelStatus === SPELEN) {
     beweegAlles();
     verwerkBotsing();
